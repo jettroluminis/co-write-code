@@ -10,7 +10,7 @@ struct GameState {
 }
 
 #[tokio::main]
-async fn main() {
+pub async fn main() {
     let game_state = GameState {
         secret_number: rand::thread_rng().gen_range(1..=100),
         output: Arc::new(Mutex::new(String::new())),
@@ -51,5 +51,5 @@ async fn handle_guess(form: std::collections::HashMap<String, String>, game_stat
         }
     }
 
-    Ok(warp::reply::html(output.clone()))
+    Ok(warp::reply::html(&output.clone()))
 }

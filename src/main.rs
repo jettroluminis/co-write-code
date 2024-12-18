@@ -1,5 +1,6 @@
 mod web;
 
-fn main() {
-    web::main();
+#[tokio::main]
+async fn main() {
+    web::main().await;
 }
