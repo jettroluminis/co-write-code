@@ -2,6 +2,6 @@
 name = "co-write-code"
 version = "0.1.0"
 authors = ["Jettro Coenradie <jettro.coenradie@luminis.eu>"]
-edition = "2024"
+edition = "2021"
 
 [dependencies]
