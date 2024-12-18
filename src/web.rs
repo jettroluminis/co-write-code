@@ -51,5 +51,5 @@ async fn handle_guess(form: std::collections::HashMap<String, String>, game_stat
         }
     }
 
-    Ok(warp::reply::html(&output.clone()))
+    Ok(warp::reply::html(output.clone().as_str()))
 }
